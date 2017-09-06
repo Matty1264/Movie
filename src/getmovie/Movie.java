@@ -30,6 +30,8 @@ public class Movie extends javax.swing.JFrame {
         northButton = new javax.swing.JButton();
         southButton = new javax.swing.JButton();
         outputLabel = new javax.swing.JLabel();
+        btnWest = new javax.swing.JButton();
+        btnEast = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +52,22 @@ public class Movie extends javax.swing.JFrame {
         getContentPane().add(southButton, java.awt.BorderLayout.PAGE_END);
         getContentPane().add(outputLabel, java.awt.BorderLayout.CENTER);
 
+        btnWest.setText("West");
+        btnWest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnWestActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnWest, java.awt.BorderLayout.LINE_START);
+
+        btnEast.setText("East");
+        btnEast.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEastActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEast, java.awt.BorderLayout.LINE_END);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -62,6 +80,16 @@ public class Movie extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.outputLabel.setText("North by Northwest, Released: 1959, Star: Cary Grant");
     }//GEN-LAST:event_northButtonActionPerformed
+
+    private void btnWestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnWestActionPerformed
+        // TODO add your handling code here:
+        this.outputLabel.setText("West by Brit Marling, Released: 2013, Star:  Jördis Triebel");
+    }//GEN-LAST:event_btnWestActionPerformed
+
+    private void btnEastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEastActionPerformed
+        // TODO add your handling code here:
+        this.outputLabel.setText("The East by Zal Batmanglij, Released: 2013, Star: Brit Marling");
+    }//GEN-LAST:event_btnEastActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,6 +127,8 @@ public class Movie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEast;
+    private javax.swing.JButton btnWest;
     private javax.swing.JButton northButton;
     private javax.swing.JLabel outputLabel;
     private javax.swing.JButton southButton;
